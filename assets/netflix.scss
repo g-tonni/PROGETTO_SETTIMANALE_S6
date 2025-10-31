@@ -1,0 +1,63 @@
+@import './scss/functions';
+@import './scss/variables';
+
+$h0-font-size: $font-size-base * 5;
+$h7-font-size: $font-size-base * 0.8;
+$h8-font-size: $font-size-base * 0.6;
+$h9-font-size: $font-size-base * 0.4;
+$h10-font-size: $font-size-base * 0.2;
+
+$new-font-sizes: (
+  0: $h0-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+  9: $h9-font-size,
+  10: $h10-font-size,
+);
+
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+
+$new-theme-colors: (
+  'primary': #cc111c,
+  'dark': #141414,
+  't-light': #828282,
+  't-xlight': #666666,
+);
+
+$theme-colors: map-merge($theme-colors, $new-theme-colors);
+
+.navbar {
+  background: linear-gradient(
+    0deg,
+    hsla(0, 0%, 8%, 1) 0%,
+    hsla(0, 0%, 0%, 1) 100%
+  );
+}
+
+$nav-link-color: map-get($new-theme-colors, 't-light');
+$navbar-light-color: map-get($new-theme-colors, 't-light');
+$navbar-light-hover-color: map-get($new-theme-colors, 't-xlight');
+
+$dropdown-link-color: map-get($new-theme-colors, 't-light');
+$dropdown-link-active-color: map-get($new-theme-colors, 't-light');
+$dropdown-color: white;
+$dropdown-bg: black;
+$dropdown-border-color: map-get($new-theme-colors, 't-light');
+$dropdown-border-radius: 0;
+$dropdown-border-width: 0.5;
+
+$btn-border-radius: 0;
+
+$carousel-control-width: 5%;
+$carousel-control-opacity: 0;
+$carousel-control-hover-opacity: 0.9;
+
+$link-color: map-get($new-theme-colors, 't-light');
+$link-decoration: none;
+$link-hover-color: map-get($new-theme-colors, 't-xlight');
+
+$form-check-input-checked-bg-color: map-get($new-theme-colors, 'dark');
+$form-check-input-border-radius: 0;
+$form-check-input-bg: map-get($new-theme-colors, 'dark');
+
+@import './scss/bootstrap.scss';
