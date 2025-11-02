@@ -22,6 +22,7 @@ $new-theme-colors: (
   'dark': #141414,
   't-light': #828282,
   't-xlight': #666666,
+  'button-account': #00000023,
 );
 
 $theme-colors: map-merge($theme-colors, $new-theme-colors);
@@ -59,5 +60,21 @@ $link-hover-color: map-get($new-theme-colors, 't-xlight');
 $form-check-input-checked-bg-color: map-get($new-theme-colors, 'dark');
 $form-check-input-border-radius: 0;
 $form-check-input-bg: map-get($new-theme-colors, 'dark');
+
+.link-account {
+  color: rgb(0, 153, 255);
+  &:hover {
+    color: rgb(0, 81, 195);
+  }
+  margin-bottom: 12px;
+}
+
+.mp-account {
+  margin-bottom: 12px;
+}
+
+.account-title {
+  color: rgba(0, 0, 0, 0.317);
+}
 
 @import './scss/bootstrap.scss';
